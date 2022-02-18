@@ -1,35 +1,51 @@
-var box;
 
 function setup() {
-  createCanvas(500, 500);
-  box = createSprite(250,250,50,50);
-  box.shapeColor = "black"
+  createCanvas(400,400);
+  background(51);
+  box = createSprite(200,200,30,30);
 
 }
 
-function draw() {
-  background("#1fcc92");
+function draw() 
+{
 
-  if (keyDown("up")) {
-    box.y -=3
+  // escreva o código para alterar a cor de fundo 
+  // para vermelho quando a seta para direita (RIGHT_ARROW) for pressionada
+  
+  
+
+  if (keyIsDown(LEFT_ARROW)) 
+  {
+    background("blue");
+    
   }
-  if (keyDown("right")) {
-    box.x +=3
-  }
-  if (keyDown("left")) {
-    box.x -=3
-  }
-
-
-
-  if (keyIsDown(DOWN_ARROW)) {
-    box.y +=3
-  }
-
-  if (keyDown("space")) {
-    background("blue ");
+ 
+    if (keyIsDown(UP_ARROW)) 
+  {
+    background("yellow");
+   
   }
 
+  if (keyIsDown(DOWN_ARROW)) 
+  {
+    background("green");
+  }
+
+  if (keyIsDown(RIGHT_ARROW)) 
+  {
+    background("PINK");
+    
+  }
+  
+  
+
+
+
+
+
+
+
+  
   drawSprites();
 }
 
